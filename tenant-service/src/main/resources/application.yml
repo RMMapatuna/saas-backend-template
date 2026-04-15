@@ -1,0 +1,14 @@
+server:
+  port: 8081
+  shutdown: graceful
+
+spring:
+  application:
+    name: tenant-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      pool-name: tenant-service-pool
+  flyway:
+    locations: classpath:db/migration
+    baseline-on-migrate: true
